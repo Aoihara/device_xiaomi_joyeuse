@@ -4,10 +4,17 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from joyeuse device
 $(call inherit-product, device/xiaomi/joyeuse/device.mk)
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_joyeuse
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Inherit some common Nusantara-ROM stuff.
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
+NAD_BUILD_TYPE := dev
+
+PRODUCT_NAME := nad_joyeuse
 PRODUCT_DEVICE := joyeuse
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 9 Pro
