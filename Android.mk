@@ -15,6 +15,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),curtana)
+ifeq ($(TARGET_DEVICE),joyeuse)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
